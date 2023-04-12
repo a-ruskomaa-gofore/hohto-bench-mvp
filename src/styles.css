@@ -1,0 +1,56 @@
+.App {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: orange;
+    padding: 2em;
+}
+
+.main-area {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.cardview {
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 2;
+    padding: 1rem;
+}
+
+.cardlist > h3 {
+    width: 100%;
+    margin-left: 10px;
+}
+
+.cardlist {
+    background-color: chartreuse;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1rem;
+    margin: 10px 10px;
+    flex: 1;
+    align-content: flex-start;
+}
+
+.card {
+    background-color: steelblue;
+    padding: 1rem;
+    width: 300px;
+    height: 100px;
+    margin: 10px 10px;
+    flex: none;
+}
+
+.sidebar {
+    background-color: rosybrown;
+    padding: 1rem;
+    flex: 1;
+    max-width: 200px;
+}
