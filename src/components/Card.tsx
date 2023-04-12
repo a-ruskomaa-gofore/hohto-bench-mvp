@@ -1,6 +1,12 @@
-const Card = () => {
+import { Employee } from "../types/types";
+
+interface CardProps {
+    employee: Employee
+} 
+
+const Card = ({employee}: CardProps) => {
     return (
-        <div className="card">Card</div>
+        <div className="card">{employee.name}</div>
     )
 };
 

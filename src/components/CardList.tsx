@@ -1,13 +1,17 @@
+import { Employee } from "../types/types";
 import Card from "./Card";
 
-const CardList = () => {
-    const cards = Array(Math.ceil(Math.random() * 20)).fill(<Card></Card>);
+type CardListProps = {
+    title: string,
+    employees: Array<Employee>
+}
 
-    console.log(cards);
+const CardList = ({title, employees}: CardListProps) => {
+    const cards = employees.map((employee) => <Card employee={employee}></Card>);
 
     return (
         <div className="cardlist">
-            <h3>Cardlist</h3>
+            <h3>{title}</h3>
             {cards}
         </div>
     )
