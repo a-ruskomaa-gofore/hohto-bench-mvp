@@ -3,8 +3,8 @@ import { Employee, EmployeeService } from '../types/types';
 const fetchEmployeeData = async (): Promise<Array<Employee>> => {
   return [
     {
-        id: 1,
-      name: 'Test employee 1',
+      id: 1,
+      name: 'Sanni Vanhanen',
       experienceYears: 2,
       keySkills: ['AWS', 'React'],
       status: 'free',
@@ -12,7 +12,7 @@ const fetchEmployeeData = async (): Promise<Array<Employee>> => {
     },
     {
       id: 2,
-      name: 'Test employee 2',
+      name: 'Klaus Salo',
       experienceYears: 1,
       keySkills: ['Java', 'React'],
       status: 'free',
@@ -20,7 +20,7 @@ const fetchEmployeeData = async (): Promise<Array<Employee>> => {
     },
     {
       id: 3,
-      name: 'Test employee 3',
+      name: 'Mark Wolfe',
       experienceYears: 3,
       keySkills: ['AWS', 'Java'],
       status: 'free',
@@ -28,7 +28,7 @@ const fetchEmployeeData = async (): Promise<Array<Employee>> => {
     },
     {
       id: 4,
-      name: 'Test employee 4',
+      name: 'Albert Peltonen',
       experienceYears: 2,
       keySkills: ['C#', 'React'],
       status: 'offered',
@@ -36,7 +36,7 @@ const fetchEmployeeData = async (): Promise<Array<Employee>> => {
     },
     {
       id: 5,
-      name: 'Test employee 5',
+      name: 'Joakim Tuominen',
       experienceYears: 3,
       keySkills: ['Azure', 'React', 'AWS'],
       status: 'free',
@@ -44,7 +44,7 @@ const fetchEmployeeData = async (): Promise<Array<Employee>> => {
     },
     {
       id: 6,
-      name: 'Test employee 6',
+      name: 'Martirio Sandoval',
       experienceYears: 4,
       keySkills: ['Node', 'Vue'],
       status: 'free',
@@ -52,7 +52,7 @@ const fetchEmployeeData = async (): Promise<Array<Employee>> => {
     },
     {
       id: 7,
-      name: 'Test employee 7',
+      name: 'Mihailo Marković',
       experienceYears: 2,
       keySkills: ['Java', 'Javascript'],
       status: 'offered',
