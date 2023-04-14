@@ -38,7 +38,7 @@ const EmployeeCard = ({ employee }: CardProps) => {
           {/* Key skills */}
           <Grid item xs={9}>
             {employee.keySkills.slice(0, 6).map((skill) => (
-              <Chip label={skill} sx={{ margin: '3px' }}></Chip>
+              <Chip label={skill} sx={{ margin: '3px' }} key={employee.id}></Chip>
             ))}
           </Grid>
         </Grid>

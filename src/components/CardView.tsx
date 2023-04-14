@@ -1,7 +1,6 @@
 import Grid from '@mui/material/Grid';
 import { Employee } from '../types/types';
 import CardList from './CardList';
-import { Container } from '@mui/material';
 
 interface CardViewProps {
   employees: Array<Employee>;
@@ -24,7 +23,7 @@ const CardView = ({ employees }: CardViewProps) => {
   ];
 
   const cardLists = categories.map(({ title, filter }) => (
-    <Grid item xs={12} sm={6} md={4} padding={2}>
+    <Grid item xs={12} sm={6} md={4} padding={2} key={title}>
       <CardList title={title} employees={employees.filter(filter)}></CardList>
     </Grid>
   ));

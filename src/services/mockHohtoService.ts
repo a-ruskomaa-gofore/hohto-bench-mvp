@@ -3,6 +3,7 @@ import { Employee, EmployeeService } from '../types/types';
 const fetchEmployeeData = async (): Promise<Array<Employee>> => {
   return [
     {
+        id: 1,
       name: 'Test employee 1',
       experienceYears: 2,
       keySkills: ['AWS', 'React'],
@@ -10,6 +11,7 @@ const fetchEmployeeData = async (): Promise<Array<Employee>> => {
       freeCapacity: 100,
     },
     {
+      id: 2,
       name: 'Test employee 2',
       experienceYears: 1,
       keySkills: ['Java', 'React'],
@@ -17,6 +19,7 @@ const fetchEmployeeData = async (): Promise<Array<Employee>> => {
       freeCapacity: 100,
     },
     {
+      id: 3,
       name: 'Test employee 3',
       experienceYears: 3,
       keySkills: ['AWS', 'Java'],
@@ -24,6 +27,7 @@ const fetchEmployeeData = async (): Promise<Array<Employee>> => {
       freeCapacity: 100,
     },
     {
+      id: 4,
       name: 'Test employee 4',
       experienceYears: 2,
       keySkills: ['C#', 'React'],
@@ -31,6 +35,7 @@ const fetchEmployeeData = async (): Promise<Array<Employee>> => {
       freeCapacity: 80,
     },
     {
+      id: 5,
       name: 'Test employee 5',
       experienceYears: 3,
       keySkills: ['Azure', 'React', 'AWS'],
@@ -38,6 +43,7 @@ const fetchEmployeeData = async (): Promise<Array<Employee>> => {
       freeCapacity: 100,
     },
     {
+      id: 6,
       name: 'Test employee 6',
       experienceYears: 4,
       keySkills: ['Node', 'Vue'],
@@ -45,6 +51,7 @@ const fetchEmployeeData = async (): Promise<Array<Employee>> => {
       freeCapacity: 70,
     },
     {
+      id: 7,
       name: 'Test employee 7',
       experienceYears: 2,
       keySkills: ['Java', 'Javascript'],

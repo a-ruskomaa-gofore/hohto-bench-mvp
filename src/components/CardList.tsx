@@ -9,7 +9,7 @@ type CardListProps = {
 
 const CardList = ({ title, employees }: CardListProps) => {
   const cards = employees.map((employee) => (
-    <Grid item xs>
+    <Grid item xs key={employee.id}>
       <EmployeeCard employee={employee}></EmployeeCard>
     </Grid>
   ));
