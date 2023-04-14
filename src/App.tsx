@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import Header from './components/Header';
 import CardView from './components/CardView';
-import Sidebar from './components/Sidebar';
-import './styles.css';
 import mockHohtoService from './services/mockHohtoService';
 import { Employee } from './types/types';
+import { AppBar, Box, CssBaseline, Drawer, Typography } from '@mui/material';
 
 function App() {
   const [employees, setEmployees] = useState<Array<Employee>>([]);
@@ -16,13 +14,20 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-      <Header></Header>
-      <div className='main-area'>
-        <CardView employees={employees}></CardView>
-        <Sidebar></Sidebar>
-      </div>
-    </div>
+    <>
+      <CssBaseline>
+        <AppBar position='sticky' sx={{ backgroundColor: 'white', color: 'black', paddingBottom: 5 }}>
+          <Typography component="h1" variant="h3" align="center" paddingTop={2}>
+            Header
+          </Typography>
+        </AppBar>
+        <Box paddingLeft={2} paddingTop={2}>
+          <CardView employees={employees}></CardView>
+          <Drawer variant='permanent'
+            anchor="right"></Drawer>
+        </Box>
+      </CssBaseline>
+    </>
   );
 }
 

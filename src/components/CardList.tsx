@@ -1,5 +1,6 @@
+import { Grid, Paper, Typography } from "@mui/material";
 import { Employee } from "../types/types";
-import Card from "./Card";
+import EmployeeCard from "./EmployeeCard";
 
 type CardListProps = {
     title: string,
@@ -7,13 +8,20 @@ type CardListProps = {
 }
 
 const CardList = ({title, employees}: CardListProps) => {
-    const cards = employees.map((employee) => <Card employee={employee}></Card>);
+    const cards = employees.map((employee) => (
+    <Grid item xs>
+        <EmployeeCard employee={employee}></EmployeeCard>
+    </Grid>));
 
     return (
-        <div className="cardlist">
-            <h3>{title}</h3>
-            {cards}
-        </div>
+        <Paper variant="outlined">
+            <Grid container direction="column" spacing={2} padding="10px">
+                <Grid item xs>
+                    <Typography variant="h5">{title}</Typography>
+                </Grid>
+                {cards}
+            </Grid>
+        </Paper>
     )
 };
 

@@ -48,7 +48,7 @@ const fetchEmployeeData = async (): Promise<Array<Employee>> => {
             keySkills: [
                 "Azure",
                 "React",
-                "AwS"
+                "AWS"
             ],
             status: "free",
             freeCapacity: 100
