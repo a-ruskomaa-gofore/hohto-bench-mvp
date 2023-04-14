@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import CardView from './components/CardView';
 import mockHohtoService from './services/mockHohtoService';
 import { Employee } from './types/types';
