@@ -11,3 +11,5 @@ export interface Employee {
 export interface EmployeeService {
   fetchEmployeeData: () => Promise<Array<Employee>>;
 }
+
+export type FilterFunction = (value: Employee) => boolean

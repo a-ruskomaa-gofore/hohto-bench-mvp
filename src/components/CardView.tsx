@@ -22,14 +22,18 @@ const CardView = ({ employees }: CardViewProps) => {
     },
   ];
 
-  const cardLists = categories.map(({ title, filter }) => (
-    <Grid item xs={12} sm={6} md={4} padding={2} key={title}>
-      <CardList title={title} employees={employees.filter(filter)}></CardList>
-    </Grid>
-  ));
+  const cardLists = categories.map(({ title, filter }) => {
+    const filteredEmployees = employees.filter(filter);
+
+    return filteredEmployees.length > 0 ? (
+      <Grid item sm={12} md={6} lg={4} padding={2} key={title}>
+        <CardList title={title} employees={filteredEmployees}></CardList>
+      </Grid>
+    ) : null;
+  });
 
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={2} justifyContent='flex-end'>
       {cardLists}
     </Grid>
   );

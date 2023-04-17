@@ -58,6 +58,14 @@ const fetchEmployeeData = async (): Promise<Array<Employee>> => {
       status: 'offered',
       freeCapacity: 100,
     },
+    {
+      id: 7,
+      name: 'Konsta Makkonen-Kukkonen',
+      experienceYears: 5,
+      keySkills: ['Java', 'Javascript', 'AWS', 'React', 'Scrum', 'Node.js', 'C#'],
+      status: '2ndRound',
+      freeCapacity: 100,
+    },
   ];
 };
 
