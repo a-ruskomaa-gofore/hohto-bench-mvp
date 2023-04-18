@@ -25,7 +25,7 @@ const EmployeeCard = ({ employee }: CardProps) => {
           </Grid>
           <Grid item xs={2} minWidth='4rem'>
             <Chip
-              label={employee.freeCapacity + '%'}
+              label={employee.utilization + '%'}
               sx={{ margin: '1px', minWidth: 'fit-content' }}
             ></Chip>
           </Grid>

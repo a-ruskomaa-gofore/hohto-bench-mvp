@@ -16,7 +16,7 @@ interface FilterProps {
 
 interface Filters {
   experienceYearsFilter: FilterFunction;
-  freeCapacityFilter: FilterFunction;
+  utilizationFilter: FilterFunction;
 }
 
 type numberKey = {
@@ -26,8 +26,8 @@ type numberKey = {
 const experienceYearMarkOptions = [0, 1, 2, 3, 4, 5];
 const experienceYearDefaults = [0, 5];
 
-const freeCapacityMarkOptions = [50, 60, 70, 80, 90, 100];
-const freeCapacityDefaults = [50, 100];
+const utilizationMarkOptions = [0, 10, 20, 30, 40, 50];
+const utilizationDefaults = [0, 50];
 
 function getNumericFilter(
   fieldName: numberKey,
@@ -54,14 +54,14 @@ function getNumericFilter(
 
 const Filter = ({ onFilterChanged }: FilterProps) => {
   const [experienceYears, setExperienceYears] = useState<number[]>([0, 5]);
-  const [freeCapacity, setFreeCapacity] = useState<number[]>([50, 100]);
+  const [utilization, setUtilization] = useState<number[]>([50, 100]);
 
   const [filters, setFilters] = useState<Filters>({
     experienceYearsFilter: getNumericFilter(
       'experienceYears',
       experienceYearDefaults
     ),
-    freeCapacityFilter: getNumericFilter('freeCapacity', freeCapacityDefaults),
+    utilizationFilter: getNumericFilter('utilization', utilizationDefaults),
   });
 
   // TODO add debounce
@@ -79,14 +79,14 @@ const Filter = ({ onFilterChanged }: FilterProps) => {
   };
 
   // TODO add debounce
-  const handleFreeCapacityChange = (
+  const handleUtilizationChange = (
     event: Event,
     newValue: number | number[]
   ) => {
-    setFreeCapacity(newValue as number[]);
+    setUtilization(newValue as number[]);
     const newFilters: Filters = {
       ...filters,
-      freeCapacityFilter: getNumericFilter('freeCapacity', newValue),
+      utilizationFilter: getNumericFilter('utilization', newValue),
     };
     setFilters(newFilters);
     onFilterChanged(Object.values(newFilters));
@@ -121,12 +121,12 @@ const Filter = ({ onFilterChanged }: FilterProps) => {
             min={50}
             max={100}
             step={10}
-            markOpts={freeCapacityMarkOptions.map((val) => ({
+            markOpts={utilizationMarkOptions.map((val) => ({
               value: val,
               label: `${val}%`,
             }))}
-            value={freeCapacity}
-            onChange={handleFreeCapacityChange}
+            value={utilization}
+            onChange={handleUtilizationChange}
           ></FilterSlider>
         </Box>
       </ListItem>

@@ -3,7 +3,7 @@ export interface Employee {
   name: string;
   imageUrl?: string;
   experienceYears: number;
-  freeCapacity: number;
+  utilization: number;
   keySkills: Array<string>;
   status: 'free' | 'offered' | '2ndRound';
 }

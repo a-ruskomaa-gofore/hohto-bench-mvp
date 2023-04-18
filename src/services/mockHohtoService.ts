@@ -8,7 +8,7 @@ const fetchEmployeeData = async (): Promise<Array<Employee>> => {
       experienceYears: 2,
       keySkills: ['AWS', 'React'],
       status: 'free',
-      freeCapacity: 100,
+      utilization: 0,
     },
     {
       id: 2,
@@ -16,7 +16,7 @@ const fetchEmployeeData = async (): Promise<Array<Employee>> => {
       experienceYears: 1,
       keySkills: ['Java', 'React'],
       status: 'free',
-      freeCapacity: 100,
+      utilization: 0,
     },
     {
       id: 3,
@@ -24,7 +24,7 @@ const fetchEmployeeData = async (): Promise<Array<Employee>> => {
       experienceYears: 3,
       keySkills: ['AWS', 'Java'],
       status: 'free',
-      freeCapacity: 100,
+      utilization: 0,
     },
     {
       id: 4,
@@ -32,7 +32,7 @@ const fetchEmployeeData = async (): Promise<Array<Employee>> => {
       experienceYears: 2,
       keySkills: ['C#', 'React'],
       status: 'offered',
-      freeCapacity: 80,
+      utilization: 20,
     },
     {
       id: 5,
@@ -40,7 +40,7 @@ const fetchEmployeeData = async (): Promise<Array<Employee>> => {
       experienceYears: 3,
       keySkills: ['Azure', 'React', 'AWS'],
       status: 'free',
-      freeCapacity: 100,
+      utilization: 0,
     },
     {
       id: 6,
@@ -48,7 +48,7 @@ const fetchEmployeeData = async (): Promise<Array<Employee>> => {
       experienceYears: 4,
       keySkills: ['Node', 'Vue'],
       status: 'free',
-      freeCapacity: 70,
+      utilization: 30,
     },
     {
       id: 7,
@@ -56,7 +56,7 @@ const fetchEmployeeData = async (): Promise<Array<Employee>> => {
       experienceYears: 2,
       keySkills: ['Java', 'Javascript'],
       status: 'offered',
-      freeCapacity: 100,
+      utilization: 0,
     },
     {
       id: 7,
@@ -64,7 +64,7 @@ const fetchEmployeeData = async (): Promise<Array<Employee>> => {
       experienceYears: 5,
       keySkills: ['Java', 'Javascript', 'AWS', 'React', 'Scrum', 'Node.js', 'C#'],
       status: '2ndRound',
-      freeCapacity: 100,
+      utilization: 0,
     },
   ];
 };
