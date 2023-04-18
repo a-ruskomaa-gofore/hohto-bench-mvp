@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "./hohto-bench-mvp/static/js/main.4f2c7bde.js",
-    "index.html": "./hohto-bench-mvp/index.html",
-    "main.4f2c7bde.js.map": "./hohto-bench-mvp/static/js/main.4f2c7bde.js.map"
+    "main.js": "./static/js/main.4f2c7bde.js",
+    "index.html": "./index.html",
+    "main.4f2c7bde.js.map": "./static/js/main.4f2c7bde.js.map"
   },
   "entrypoints": [
     "static/js/main.4f2c7bde.js"
