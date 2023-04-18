@@ -18,7 +18,6 @@ function App() {
 
   const handleFilterChange = (filters: FilterFunction[]) => {
     const filtered = employees.filter(employee => filters.every(filter => filter(employee)));
-    console.log(filtered);
     setFilteredEmployees(filtered);
   }
 

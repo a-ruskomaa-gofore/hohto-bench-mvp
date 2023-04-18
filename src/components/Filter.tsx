@@ -35,7 +35,7 @@ function getNumericFilter(
   type?: "min" | "max"
 ): FilterFunction {
   if (fieldName === undefined) {
-    return () => false
+    return () => true
   }
   else if (Array.isArray(value) && value.length === 2) {
     return (employee: Employee) =>
@@ -48,7 +48,7 @@ function getNumericFilter(
     return (employee: Employee) => employee[fieldName] >= value;
   }
   else {
-    return () => false
+    return () => true
   }
 }
 
