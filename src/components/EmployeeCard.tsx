@@ -21,7 +21,10 @@ const EmployeeCard = ({ employee }: CardProps) => {
         <Grid container spacing={1}>
           {/* Name */}
           <Grid item xs>
-            <Typography variant="subtitle1">{employee.name}</Typography>
+            <Box>
+              <Typography variant="subtitle1">{employee.name}</Typography>
+              <Typography variant="subtitle2" color="grey">{employee.title}</Typography>
+            </Box>
           </Grid>
           <Grid item xs={2} minWidth='4rem'>
             <Chip

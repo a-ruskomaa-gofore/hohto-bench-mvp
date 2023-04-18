@@ -1,6 +1,7 @@
 export interface Employee {
   id: number;
   name: string;
+  title: string;
   imageUrl?: string;
   experienceYears: number;
   utilization: number;
