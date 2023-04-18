@@ -53,8 +53,8 @@ function getNumericFilter(
 }
 
 const Filter = ({ onFilterChanged }: FilterProps) => {
-  const [experienceYears, setExperienceYears] = useState<number[]>([0, 5]);
-  const [utilization, setUtilization] = useState<number[]>([50, 100]);
+  const [experienceYears, setExperienceYears] = useState<number[]>(experienceYearDefaults);
+  const [utilization, setUtilization] = useState<number[]>(utilizationDefaults);
 
   const [filters, setFilters] = useState<Filters>({
     experienceYearsFilter: getNumericFilter(
@@ -117,9 +117,9 @@ const Filter = ({ onFilterChanged }: FilterProps) => {
             onChange={handleExperienceYearsChange}
           ></FilterSlider>
           <FilterSlider
-            label="Free capacity"
-            min={50}
-            max={100}
+            label="Utilization"
+            min={0}
+            max={50}
             step={10}
             markOpts={utilizationMarkOptions.map((val) => ({
               value: val,
