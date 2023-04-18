@@ -105,7 +105,7 @@ const Filter = ({ onFilterChanged }: FilterProps) => {
       <ListItem>
         <Box width="90%">
           <FilterSlider
-            label="Experience years"
+            label="Work experience"
             min={0}
             max={5}
             step={1}
